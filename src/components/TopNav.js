@@ -17,7 +17,7 @@ export const TopNav = () => (
 
 const Wrapper = styled.div`
   background: rgba(255, 255, 255, 0.6);
-  margin: 10px 30px;
+  margin: 10px 0;
   border-radius: 30px;
   border: 1px solid rgba(255, 255, 255, 0.6);
   border-top: none;

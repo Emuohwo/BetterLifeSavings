@@ -3,11 +3,15 @@ import {SideBar} from './SideBar'
 import {Main} from './Main'
 import styled from 'styled-components'
 const Section = styled.section`
-border: 3px solid red
+border: 1px solid red;
+box-sizing:border-box;
+padding:0;
+margin:0;
+
 `
 
 const Home = () => (
-    <Section>
+    <Section className='row'>
         <SideBar />
         <Main />
     </Section>
