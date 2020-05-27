@@ -32,7 +32,7 @@ export const AppBar = () => (
 );
 const styles = {
   appbar: {
-    padding: "30px",
+    padding:0,
     height: "50px !important",
   },
   info: {
