@@ -4,6 +4,11 @@ import { AppBar } from './components/AppBar';
 import {TopNav} from './components/TopNav'
 import styles from './App.module.css'
 import { Home,Register,Account, About } from './screens';
+import { library } from '@fortawesome/fontawesome-svg-core'
+import { fab } from '@fortawesome/free-brands-svg-icons'
+import { faCheckSquare, faCoffee } from '@fortawesome/free-solid-svg-icons'
+
+library.add(fab, faCheckSquare, faCoffee)
 
 const App = () => (
   <div className={styles.App}>
