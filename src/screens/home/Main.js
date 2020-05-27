@@ -4,9 +4,11 @@ import bg from '../../images/1.jpg'
 import {Button} from 'react-bootstrap'
 
 const Section = styled.section`
-background:blue;
 height:400px;
-float:right !important;
+width:100%;
+padding:10px;
+margin:0;
+background: rgba(255, 255, 255, 0.4);
 `
 const Banner = styled.div`
 height:100% !important;
@@ -15,12 +17,10 @@ justify-content:center;
 align-items:center;
 flex-direction:column;
 color:white;
+border-radius:15px;
 background-image:url(${bg});
 background-size:cover;
 background-position:center;
-h1{
-    margin:auto;
-   
 `
 
 export const Main = () => (
