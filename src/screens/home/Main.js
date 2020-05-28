@@ -27,9 +27,9 @@ export const Main = () => (
     <Section className='col-sm-9'>
         <Banner>
             <div>
-            <h1>
+            <h2 style={{fontWeight:'bold' }}>
                 Plan Your Future by Saving Today
-            </h1>
+            </h2>
             <h4>
                 Do not save what is left after spending<br/>
                 spend what is left <strong>after saving</strong>
