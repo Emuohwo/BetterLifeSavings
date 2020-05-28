@@ -6,9 +6,9 @@ import styles from './App.module.css'
 import { Home,Register,Account, About } from './screens';
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { fab } from '@fortawesome/free-brands-svg-icons'
-import { faCheckSquare, faCoffee } from '@fortawesome/free-solid-svg-icons'
+import { faCheckSquare, faCoffee, faEnvelope} from '@fortawesome/free-solid-svg-icons'
 
-library.add(fab, faCheckSquare, faCoffee)
+library.add(fab, faCheckSquare, faCoffee,faEnvelope)
 
 const App = () => (
   <div className={styles.App}>

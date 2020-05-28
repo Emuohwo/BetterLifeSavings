@@ -52,3 +52,4 @@ const styles = {
     margin: 20,
   },
 };
+const add = '6, omokudu ajayi street. Okuneye estate. Ile-iwe bus-stop. Egbe. Lagos, Nigeria.'
