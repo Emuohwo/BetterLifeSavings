@@ -13,6 +13,7 @@ export const EmailAndPhone = ({ step, formik, next, previous }) => {
         <Form.Control
           type="email"
           name="email"
+          placeholder='Email'
           {...getFieldProps("email")}
           isValid={touched.email && !errors.email}
           isInvalid={touched.email && !!errors.email}
@@ -27,6 +28,7 @@ export const EmailAndPhone = ({ step, formik, next, previous }) => {
         <Form.Control
           type="tel"
           name="phone"
+          placeholder='Phone'
           {...getFieldProps("phone")}
           isValid={touched.phone && !errors.phone}
           isInvalid={touched.phone && !!errors.phone}

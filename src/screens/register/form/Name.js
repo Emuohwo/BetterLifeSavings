@@ -10,10 +10,11 @@ export const Name = ({ step, formik, next, previous }) => {
   return (
     <>
       <Form.Group md="4" controlId="Formik01">
-        <Form.Label>First name</Form.Label>
+        <Form.Label>First Name</Form.Label>
         <Form.Control
           type="text"
           name="firstName"
+          placeholder='First Name'
           {...getFieldProps("firstName")}
           isValid={touched.firstName && !errors.firstName}
           isInvalid={touched.firstName && !!errors.firstName}
@@ -24,10 +25,11 @@ export const Name = ({ step, formik, next, previous }) => {
         </Form.Control.Feedback>
       </Form.Group>
       <Form.Group md="4" controlId="Formik02">
-        <Form.Label>Last name</Form.Label>
+        <Form.Label>Last Name</Form.Label>
         <Form.Control
           type="text"
           name="lastName"
+          placeholder='Last Name'
           {...getFieldProps("lastName")}
           isValid={touched.lastName && !errors.lastName}
           isInvalid={touched.lastName && !!errors.lastName}
