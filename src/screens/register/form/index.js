@@ -44,8 +44,8 @@ function RegisterationForm() {
       validationSchema={schema}
       onSubmit={(value) => console.log(value)}
       initialValues={{
-        firstName: "Mark",
-        lastName: "Otto",
+        firstName: "",
+        lastName: "",
         email: "",
         phone: "",
       }}
