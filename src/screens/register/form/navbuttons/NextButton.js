@@ -4,7 +4,7 @@ const styles = {
   float: "right",
 };
 export function NextButton({ step, disabled, next }) {
-  if (step < 3) {
+  if (step < 4) {
     return (
       <Button
         style={styles}
