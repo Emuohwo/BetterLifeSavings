@@ -5,6 +5,7 @@ import { Form } from "react-bootstrap";
 import { EmailAndPhone } from "./EmailAndPhone";
 import { Name } from "./Name";
 import { Address } from "./Address";
+import {StateCityGenderBirth} from './StateCity'
 
 const phoneRegExp = /^(\+?\d{0,4})?\s?-?\s?(\(?\d{3}\)?)\s?-?\s?(\(?\d{3}\)?)\s?-?\s?(\(?\d{4}\)?)?$/;
 const schema = yup.object({
@@ -44,11 +45,11 @@ const schema = yup.object({
 });
 
 function RegisterationForm() {
-  const [step, setStep] = React.useState(1);
+  const [step, setStep] = React.useState(4);
   React.useEffect(() => {
     console.log(step);
   });
-  const next = () => setStep(step >= 2 ? 3 : step + 1);
+  const next = () => setStep(step >= 4 ? 5 : step + 1);
   const previous = () => setStep(step <= 1 ? 1 : step - 1);
 
   return (
@@ -62,6 +63,10 @@ function RegisterationForm() {
         phone: "",
         address1: "",
         address2: "",
+        city:'',
+        state:'',
+        gender:'',
+        dob:''
       }}
     >
       {(formik) => (
@@ -74,6 +79,12 @@ function RegisterationForm() {
             previous={previous}
           />
           <Address
+            formik={formik}
+            step={step}
+            next={next}
+            previous={previous}
+          />
+           <StateCityGenderBirth
             formik={formik}
             step={step}
             next={next}
