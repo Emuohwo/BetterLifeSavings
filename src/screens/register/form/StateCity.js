@@ -2,7 +2,6 @@ import React from "react";
 import { Form, Col, Row } from "react-bootstrap";
 import { PreviousButton } from "./navbuttons/PreviousButton";
 import { NextButton } from "./navbuttons/NextButton";
-import { Field, ErrorMessage } from "formik";
 
 export const StateCityGenderBirth = ({ step, formik, next, previous }) => {
   if (step !== 4) return null;
@@ -49,7 +48,7 @@ export const StateCityGenderBirth = ({ step, formik, next, previous }) => {
       <Form.Row>
         <Col sm={6}>
           <fieldset>
-            <Form.Group as={Row}>
+            <Form.Group as={Row} controlId="Formik09">
               <Form.Label as="legend" column sm={6}>
                 Gender
               </Form.Label>
@@ -73,6 +72,15 @@ export const StateCityGenderBirth = ({ step, formik, next, previous }) => {
                   onChange={() => setFieldValue("gender", "male")}
                 />
               </Col>
+              <div
+                style={{
+                  margin: "5px auto",
+                  color: "#d84315",
+                  fontSize: "13px",
+                }}
+              >
+                {touched.gender && !!errors.gender ? errors.gender : ""}
+              </div>
             </Form.Group>
           </fieldset>
         </Col>
@@ -82,7 +90,7 @@ export const StateCityGenderBirth = ({ step, formik, next, previous }) => {
       <NextButton
         step={step}
         next={next}
-        disabled={!!errors.city || !!errors.state}
+        disabled={!!errors.city || !!errors.state || errors.gender}
       />
     </>
   );

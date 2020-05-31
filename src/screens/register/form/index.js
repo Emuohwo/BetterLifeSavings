@@ -5,7 +5,7 @@ import { Form } from "react-bootstrap";
 import { EmailAndPhone } from "./EmailAndPhone";
 import { Name } from "./Name";
 import { Address } from "./Address";
-import {StateCityGenderBirth} from './StateCity'
+import { StateCityGenderBirth } from "./StateCity";
 
 const phoneRegExp = /^(\+?\d{0,4})?\s?-?\s?(\(?\d{3}\)?)\s?-?\s?(\(?\d{3}\)?)\s?-?\s?(\(?\d{4}\)?)?$/;
 const schema = yup.object({
@@ -33,6 +33,17 @@ const schema = yup.object({
     .string()
     .min(10, "*Address is too short")
     .required("*Address is required"),
+  city: yup
+    .string()
+    .min(3, "*Too short")
+    .max(30, "*City can't be longer than 30 characters")
+    .required("*City is required"),
+  state: yup
+    .string()
+    .min(3, "*Too short")
+    .max(30, "*State can't be longer than 30 characters")
+    .required("*State is required"),
+  gender: yup.string().required("*Select gender"),
   /*username: yup
     .string()
     .min(3, "*Username must be at least 3 characters long")
@@ -63,10 +74,10 @@ function RegisterationForm() {
         phone: "",
         address1: "",
         address2: "",
-        city:'',
-        state:'',
-        gender:'',
-        dob:''
+        city: "",
+        state: "",
+        gender: "",
+        dob: "",
       }}
     >
       {(formik) => (
@@ -84,7 +95,7 @@ function RegisterationForm() {
             next={next}
             previous={previous}
           />
-           <StateCityGenderBirth
+          <StateCityGenderBirth
             formik={formik}
             step={step}
             next={next}
