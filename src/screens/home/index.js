@@ -1,6 +1,6 @@
 import React from 'react'
-import {SideBar} from './sidebar'
-import {Main} from './Main'
+import SideBar from '../../components/sidebar'
+import Main from './main'
 import styled from 'styled-components'
 const Section = styled.section`
 border: 1px solid rgba(255, 255, 255, 0.7);

@@ -2,6 +2,7 @@ import React from "react";
 import logo from "../images/logo.png";
 import wallet from "../images/wallet.png";
 import { Button } from "react-bootstrap";
+import {Link} from 'react-router-dom'
 
 export const AppBar = () => (
   <div className="row" style={styles.appbar}>
@@ -9,23 +10,24 @@ export const AppBar = () => (
       <img src={logo} alt="better life savings" />
     </div>
     <div className="col-sm-4" style={styles.info}>
-      <div>07030062542</div>
+      <div>08035691490, 08051921999</div>
       <div>
-        115 Chevron Drive <br />
-        Lekki, Lagos
+      6, omokudu ajayi street.<br/> 
+      Okuneye estate, Egbe.<br /> 
+      Lagos, Nigeria.
       </div>
     </div>
     <div className="col-sm-4">
       <div style={styles.wallet}>
         <img src={wallet} height="100%" alt="wallet" />
-        <div style={styles.buttons}>
+        <Link to='/register' style={styles.buttons}>
           <Button variant="outline-primary" size="sm">
             Register
           </Button>{" "}
           <Button variant="outline-primary" size="sm">
             Login
           </Button>
-        </div>
+        </Link>
       </div>
     </div>
   </div>
