@@ -4,6 +4,7 @@ import { PreviousButton } from "./navbuttons/PreviousButton";
 import { NextButton } from "./navbuttons/NextButton";
 
 export const StateCityGenderBirth = ({ step, formik, next, previous }) => {
+  console.dir(formik);
   if (step !== 4) return null;
   const { getFieldProps, touched, errors, setFieldValue, values } = formik;
   return (
@@ -84,6 +85,22 @@ export const StateCityGenderBirth = ({ step, formik, next, previous }) => {
             </Form.Group>
           </fieldset>
         </Col>
+        <Form.Group as={Col} controlId="Formik10" sm={6}>
+          <Form.Label>Date Of Birth</Form.Label>
+          <Form.Control
+            type="date"
+            name="dob"
+            {...getFieldProps("dob")}
+            isValid={touched.dob && !errors.dob}
+            isInvalid={touched.dob && !!errors.dob}
+          />
+          <Form.Control.Feedback type="valid">
+            Looks good!
+          </Form.Control.Feedback>
+          <Form.Control.Feedback type="invalid">
+            {errors.dob}
+          </Form.Control.Feedback>
+        </Form.Group>
       </Form.Row>
 
       <PreviousButton step={step} previous={previous} />
