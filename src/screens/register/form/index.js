@@ -44,15 +44,9 @@ const schema = yup.object({
     .max(30, "*State can't be longer than 30 characters")
     .required("*State is required"),
   gender: yup.string().required("*Select gender"),
-  /*username: yup
-    .string()
-    .min(3, "*Username must be at least 3 characters long")
-    .max(12, "*Username can't be longer than 12 characters")
-    .required("*Username is required"),
-  city: yup.string().required(),
-  state: yup.string().required(),
-  zip: yup.string().required(),
-  terms: yup.bool().required(),*/
+  dob: yup.string().required("*Select date of birth"),
+  
+  /*terms: yup.bool().required(),*/
 });
 
 function RegisterationForm() {

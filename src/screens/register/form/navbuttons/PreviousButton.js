@@ -13,7 +13,7 @@ export function PreviousButton({ step, previous }) {
         type="button"
         onClick={previous}
       >
-        Previous
+        Back
       </Button>
     );
   }
