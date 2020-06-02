@@ -1,7 +1,7 @@
 import React from "react";
 import { Form } from "react-bootstrap";
-import {PreviousButton} from './navbuttons/PreviousButton'
-import {NextButton} from './navbuttons/NextButton'
+import {PreviousButton} from './navbuttons/PreviousButton';
+import {NextButton} from './navbuttons/NextButton';
 
 export const EmailAndPhone = ({ step, formik, next, previous }) => {
   if (step !== 2) return null;
