@@ -13,6 +13,9 @@ const About = () => (
             <h3>A Brief History About Us</h3>
             <AboutContainer>
                 <p>
+                Hi there, this is BetterLifesavings Int’l. 
+                What we do is help you save your money 
+                (daily, weekly, monthly and yearly) for a BetterLife.
                 Founded in year 1996, under the name; Fehintola General Agencies, 
                 by Adekoya Adedeji Williams (aka baba alajo), BetterLifesavings has 
                 come a long way from its beginning in Egbe-Agodo, Lagos, Nigeria.
