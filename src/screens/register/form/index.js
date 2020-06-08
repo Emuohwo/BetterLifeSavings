@@ -45,7 +45,6 @@ const schema = yup.object({
     .required("*State is required"),
   gender: yup.string().required("*Select gender"),
   dob: yup.string().required("*Select date of birth"),
-  
   /*terms: yup.bool().required(),*/
 });
 
