@@ -7,7 +7,7 @@ export const TopNav = () => (
   <Wrapper>
     <Nav className="justify-content-center" activeKey="/home">
       <NavItem to="/" text="Home" />
-      <NavItem toabout text="About Us" />
+      <NavItem to="about" text="About Us" />
       <NavItem to="/contact" text="Contact" />
       <NavItem to="/blog" text="Blog" />
       <NavItem to="/account" text="My Account" />
@@ -22,4 +22,4 @@ const Wrapper = styled.div`
   border: 1px solid rgba(255, 255, 255, 0.6);
   border-top: none;
 `;
-console.log(Wrapper)
+console.log(Wrapper);
