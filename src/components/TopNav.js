@@ -7,7 +7,7 @@ export const TopNav = () => (
   <Wrapper>
     <Nav className="justify-content-center" activeKey="/home">
       <NavItem to="/" text="Home" />
-      <NavItem to="about" text="About Us" />
+      <NavItem to="/about" text="About Us" />
       <NavItem to="/contact" text="Contact" />
       <NavItem to="/blog" text="Blog" />
       <NavItem to="/account" text="My Account" />
