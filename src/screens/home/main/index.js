@@ -22,7 +22,7 @@ const Banner = styled.div`
   background-position: center;
 `;
 const H = styled.h4`
-  padding: 10px;
+  padding: 7px;
   margin-top: 50px;
   margin-bottom: 30px;
   font-weight: bold;
@@ -32,6 +32,7 @@ const H = styled.h4`
 const Plan = styled(Row)`
 margin:80px 0;
 padding: 20px 5px;
+color: white;
   :hover {
     box-shadow: 0px 6px 6px 0px #bdbdbd;
     opacity: 0.9;

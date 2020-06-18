@@ -17,16 +17,16 @@ export const IconCard = ()=>(
     <Card>
     <h5>Stay In Touch</h5>
     <Icon>
-    <a href="https://api.whatsapp.com/send?phone=2347086902001&text=Hi%20Better%20Life%20Savings" title='whatsapp'>
+    <a href="https://chat.whatsapp.com/J6HglRuoLVX8KzGEhAnnPh" title='whatsapp'>
     <FontAwesomeIcon icon={['fab', 'whatsapp']} size='2x' color='#00e676'/>
     </a>
     <Button>
     <FontAwesomeIcon icon={['fab', 'twitter']} size='2x' color='#00b0ff'/>
     </Button>
-    <a href="https://www.facebook.com/MrJerrytheajoguy" title='facebook'>
+    <a href="https://web.facebook.com/better.lifesavings" title='facebook'>
     <FontAwesomeIcon icon={['fab', 'facebook']} size='2x' color='#0091ea'/>
     </a>
-    <a href="https://www.instagram.com/MrJerrytheajoguy/" title='instagram'>
+    <a href="https://www.instagram.com/BetterLifesavings/" title='instagram'>
     <FontAwesomeIcon icon={['fab', 'instagram']} size='2x' color='#ff4081'/>
     </a>
     <a href="mailto:betterlifesavings2020@gmail.com" title='email us' >

@@ -9,7 +9,7 @@ const buttons =  {
   margin: 10,
 }
 const Root = styled.div`
-padding: 0;
+padding: 0 20px;
 `;
 const Contact = styled.div`
 font-size: 15,
@@ -36,14 +36,7 @@ export const AppBar = () => (
   <Root className="row">
     <Div className="col-sm-4"></Div>
     <Contact className="col-sm-4">
-      <div>08035691490, 08051921999</div>
-      <div>
-        6, omokudu ajayi street.
-        <br />
-        Okuneye estate, Egbe.
-        <br />
-        Lagos, Nigeria.
-      </div>
+      
     </Contact>
     <div className="col-sm-4">
       <Wallet>
