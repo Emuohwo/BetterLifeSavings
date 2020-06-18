@@ -18,7 +18,7 @@ export const Subscribe = () => (
         </Form.Text>
       </Form.Group>
 
-      <Button variant="primary" type="submit" size="sm">
+      <Button variant="info" type="submit" size="sm">
         Subscribe
       </Button>
     </SubForm>

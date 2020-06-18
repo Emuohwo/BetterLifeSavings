@@ -7,8 +7,9 @@ import TopStories from './topstories'
 
 const Div = styled.div`
   margin: 0;
-  background: rgba(255, 255, 255, 0.5);
+  background:#388e3c;
 `;
+// const x = rgba(255, 255, 255, 0.5);
 
 const SideBar = () => (
   <Div className="col-sm-3">

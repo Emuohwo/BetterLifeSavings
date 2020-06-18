@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useContext } from "react";
 import { Formik } from "formik";
 import * as yup from "yup";
 import { Form } from "react-bootstrap";
@@ -6,15 +6,17 @@ import { EmailAndPhone } from "./EmailAndPhone";
 import { Name } from "./Name";
 import { Address } from "./Address";
 import { StateCityGenderBirth } from "./StateCity";
+import { UsernameAndPassword } from "./UsernameAndPass";
+import { AuthContext } from '../../../context/authContext'
 
 const phoneRegExp = /^(\+?\d{0,4})?\s?-?\s?(\(?\d{3}\)?)\s?-?\s?(\(?\d{3}\)?)\s?-?\s?(\(?\d{4}\)?)?$/;
 const schema = yup.object({
-  firstName: yup
+  firstname: yup
     .string()
     .min(2, "*Name too short")
     .max(50, "*Name can't be longer than 50 characters")
     .required("*First Name is required"),
-  lastName: yup
+  lastname: yup
     .string()
     .min(2, "*Name is too short")
     .max(50, "*Name can't be longer than 50 characters")
@@ -45,24 +47,32 @@ const schema = yup.object({
     .required("*State is required"),
   gender: yup.string().required("*Select gender"),
   dob: yup.string().required("*Select date of birth"),
+  username: yup
+    .string()
+    .min(5, "*Username is too short")
+    .required("*Username is required"),
+  password: yup
+    .string()
+    .min(8, "*Password is too short")
+    .required("*Password is required"),
   /*terms: yup.bool().required(),*/
 });
 
 function RegisterationForm() {
-  const [step, setStep] = React.useState(4);
-  React.useEffect(() => {
-    console.log(step);
-  });
-  const next = () => setStep(step >= 4 ? 5 : step + 1);
-  const previous = () => setStep(step <= 1 ? 1 : step - 1);
+  const user = useContext(AuthContext);
+  console.log('user', user)
+
+  const {step, next, previous} = user;
+
+  
 
   return (
     <Formik
       validationSchema={schema}
-      onSubmit={(value) => console.log(value)}
+      onSubmit={(value) => user.save(value)}
       initialValues={{
-        firstName: "",
-        lastName: "",
+        firstname: "",
+        lastname: "",
         email: "",
         phone: "",
         address1: "",
@@ -71,6 +81,8 @@ function RegisterationForm() {
         state: "",
         gender: "",
         dob: "",
+        username: "",
+        password: "",
       }}
     >
       {(formik) => (
@@ -89,6 +101,12 @@ function RegisterationForm() {
             previous={previous}
           />
           <StateCityGenderBirth
+            formik={formik}
+            step={step}
+            next={next}
+            previous={previous}
+          />
+          <UsernameAndPassword
             formik={formik}
             step={step}
             next={next}

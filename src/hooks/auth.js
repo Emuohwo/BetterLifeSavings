@@ -1,40 +1,35 @@
 import {useState} from 'react';
-import axios from 'axios'
+import userService from '../services/userServices'
+
 function useGetUser() {
   const [data, setData] = useState({});
   const [loading, setLoading] = useState(false);
-  const [error, setError] = useState(false);
+  const [step, setStep] = useState(1);
 
-  function init() {
-    setData({});
-    setLoading(true);
-    setLoading(false)
-  }
+  const next = () => setStep(step >= 5 ? 5 : step + 1);
+  const previous = () => setStep(step <= 1 ? 1 : step - 1);
 
-  async function find(url, timeout) {
-    init();
+  const find = async () => {
     setLoading(true);
-    try {
-      const result = await axios.get(url, {timeout: timeout}).data;
-      setData(result);
-    } catch (e) {
-      setError(true);
-    }
+    const user = await userService.getUser();
+    setData(user);
     setLoading(false);
   }
-  async function save(url, timeout) {
-    init();
+  
+  const save = async (value) => {
     setLoading(true);
-    try {
-      const result = await axios.post(url, {timeout: timeout}).data;
-      setData(result);
-    } catch (e) {
-      setError(true);
-    }
+    const user = await userService.createUser(value);
+    setData(user);
+    setLoading(false);
+  }
+  const login = async (options) => {
+    setLoading(true);
+    const user = await userService.login(options);
+    setData(user);
     setLoading(false);
   }
 
-return {data, loading, error, find, save};
+return {data, loading, step, previous, next, find, save, login};
 }
 
 export default useGetUser;

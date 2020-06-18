@@ -16,10 +16,9 @@ export const TopNav = () => (
 );
 
 const Wrapper = styled.div`
-  background: rgba(255, 255, 255, 0.6);
+  background: #2e7d32;
   margin: 10px 0;
   border-radius: 30px;
   border: 1px solid rgba(255, 255, 255, 0.6);
   border-top: none;
 `;
-console.log(Wrapper)
