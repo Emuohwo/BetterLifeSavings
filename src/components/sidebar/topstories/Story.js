@@ -17,7 +17,7 @@ const StoryImg = styled.div`
 }
 position:relative;
 min-height:30vh;
-color:#dd2c00;;
+color:white;
 font-weight:bold;
 display:flex;
 justify-content:center;
@@ -41,7 +41,7 @@ export const Story = () =>(
         <div className='left'>
         <FontAwesomeIcon icon='ellipsis-v' size='lg' color='#00b0ff'/>
         </div>
-        <Button variant="primary" size="sm">Read</Button>
+        <Button variant="info" size="sm">Read</Button>
         </StoryImg>
         
     </Div>

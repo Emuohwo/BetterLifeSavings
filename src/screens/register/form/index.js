@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, {useContext } from "react";
 import { Formik } from "formik";
 import * as yup from "yup";
 import { Form } from "react-bootstrap";
@@ -7,15 +7,16 @@ import { Name } from "./Name";
 import { Address } from "./Address";
 import { StateCityGenderBirth } from "./StateCity";
 import { UsernameAndPassword } from "./UsernameAndPass";
+import { AuthContext } from '../../../context/authContext'
 
 const phoneRegExp = /^(\+?\d{0,4})?\s?-?\s?(\(?\d{3}\)?)\s?-?\s?(\(?\d{3}\)?)\s?-?\s?(\(?\d{4}\)?)?$/;
 const schema = yup.object({
-  firstName: yup
+  firstname: yup
     .string()
     .min(2, "*Name too short")
     .max(50, "*Name can't be longer than 50 characters")
     .required("*First Name is required"),
-  lastName: yup
+  lastname: yup
     .string()
     .min(2, "*Name is too short")
     .max(50, "*Name can't be longer than 50 characters")
@@ -58,21 +59,20 @@ const schema = yup.object({
 });
 
 function RegisterationForm() {
-  const [step, setStep] = useState(4);
-  const [isSubmitting, setSubmitting] = useState(false);
-  useEffect(() => {
-    console.log(step);
-  });
-  const next = () => setStep(step >= 5 ? 5 : step + 1);
-  const previous = () => setStep(step <= 1 ? 1 : step - 1);
+  const user = useContext(AuthContext);
+  console.log('user', user)
+
+  const {step, next, previous} = user;
+
+  
 
   return (
     <Formik
       validationSchema={schema}
-      onSubmit={(value) => console.log(value)}
+      onSubmit={(value) => user.save(value)}
       initialValues={{
-        firstName: "",
-        lastName: "",
+        firstname: "",
+        lastname: "",
         email: "",
         phone: "",
         address1: "",

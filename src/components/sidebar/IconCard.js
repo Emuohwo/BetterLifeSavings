@@ -29,7 +29,7 @@ export const IconCard = ()=>(
     <a href="https://www.instagram.com/MrJerrytheajoguy/" title='instagram'>
     <FontAwesomeIcon icon={['fab', 'instagram']} size='2x' color='#ff4081'/>
     </a>
-    <a href="contact" title='contact us'>
+    <a href="mailto:betterlifesavings2020@gmail.com" title='email us' >
     <FontAwesomeIcon icon='envelope' size='2x' color='#00b0ff'/>
     </a>
     

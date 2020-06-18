@@ -20,6 +20,7 @@ const Div = styled.div`
 
 const Section = styled.section`
   border: 1px solid rgba(255, 255, 255, 0.7);
+  background: #388e3c;
   border-radius: 15px;
   overflow: hidden;
   box-sizing: border-box;
