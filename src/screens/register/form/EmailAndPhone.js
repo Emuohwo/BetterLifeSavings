@@ -18,7 +18,6 @@ export const EmailAndPhone = ({ step, formik, next, previous }) => {
           isValid={touched.email && !errors.email}
           isInvalid={touched.email && !!errors.email}
         />
-        <Form.Control.Feedback type="valid">Looks good!</Form.Control.Feedback>
         <Form.Control.Feedback type="invalid">
           {errors.email}
         </Form.Control.Feedback>
@@ -33,7 +32,6 @@ export const EmailAndPhone = ({ step, formik, next, previous }) => {
           isValid={touched.phone && !errors.phone}
           isInvalid={touched.phone && !!errors.phone}
         />
-        <Form.Control.Feedback type="valid">Looks good!</Form.Control.Feedback>
         <Form.Control.Feedback type="invalid">
           {errors.phone}
         </Form.Control.Feedback>

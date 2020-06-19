@@ -18,7 +18,6 @@ export const Address = ({ step, formik, next, previous }) => {
           isValid={touched.address1 && !errors.address1}
           isInvalid={touched.address1 && !!errors.address1}
         />
-        <Form.Control.Feedback type="valid">Looks good!</Form.Control.Feedback>
         <Form.Control.Feedback type="invalid">
           {errors.address1}
         </Form.Control.Feedback>

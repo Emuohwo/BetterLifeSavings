@@ -18,7 +18,6 @@ export const UsernameAndPassword = ({ step, formik, next, previous }) => {
           isValid={touched.username && !errors.username}
           isInvalid={touched.username && !!errors.username}
         />
-        <Form.Control.Feedback type="valid">Looks good!</Form.Control.Feedback>
         <Form.Control.Feedback type="invalid">
           {errors.username}
         </Form.Control.Feedback>
@@ -33,7 +32,6 @@ export const UsernameAndPassword = ({ step, formik, next, previous }) => {
           isValid={touched.password && !errors.password}
           isInvalid={touched.password && !!errors.password}
         />
-        <Form.Control.Feedback type="valid">Looks good!</Form.Control.Feedback>
         <Form.Control.Feedback type="invalid">
           {errors.password}
         </Form.Control.Feedback>

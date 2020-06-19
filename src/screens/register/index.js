@@ -1,9 +1,10 @@
-import React from "react";
+import React, { useContext } from "react";
 import Form from "./form";
-import {Button, Row, Col, Image} from 'react-bootstrap';
-import logo from '../../images/logo.jpeg'
+import { Button, Row, Col, Image } from "react-bootstrap";
+import logo from "../../images/logo.jpeg";
 import SideBar from "../../components/sidebar";
 import styled from "styled-components";
+import { AuthContext } from "../../context/authContext";
 
 const Div = styled.div`
   background: #43a047;
@@ -32,30 +33,49 @@ const FormContainer = styled.div`
   padding: 10px;
 `;
 const Top = styled(Col)`
-text-align: left;
-padding: 20px;
-color: white;
-`
+  text-align: left;
+  padding: 20px;
+  color: white;
+`;
 
-const Register = () => (
-  <Section className="row">
-    <SideBar />
-    <FormContainer className="col-sm-9">
-      <Row>
-        <Col sm={3}>
-        <Image src={logo} roundedCircle width={200} />
-        </Col>
-        <Top sm={9}>
-        <h1>Registration Form</h1>
-        <p>Already registered ? Click <Button variant='info' size='sm'>here</Button> to login.</p>
-        <p>Upon registration, your phone will be used as your account number. Kindly ensure your use your official phone number for this registration</p>
-        <p>If you do not have an email, you can <a href='https://mail.google.com'>click here</a> or <a href='https://mail.yahoo.com'>here</a> to create one. Email is required to ensure you to don't get locked out incase you forget your password.</p>
-        </Top>
-      </Row>
-      <Div>
-        <Form />
-      </Div>
-    </FormContainer>
-  </Section>
-);
+const Register = () => {
+  const {openLogin} = useContext(AuthContext);
+  return (
+    <Section className="row">
+      <SideBar />
+      <FormContainer className="col-sm-9">
+        <Row>
+          <Col sm={3}>
+            <Image src={logo} roundedCircle width={200} />
+          </Col>
+          <Top sm={9}>
+            <h1>Registration Form</h1>
+            <p>
+              Already registered ? Click{" "}
+              <Button variant="info" size="sm" onClick={openLogin}>
+                here
+              </Button>{" "}
+              to login.
+            </p>
+            <p>
+              Upon registration, your phone will be used as your account number.
+              Kindly ensure your use your official phone number for this
+              registration
+            </p>
+            <p>
+              If you do not have an email, you can{" "}
+              <a href="https://mail.google.com">click here</a> or{" "}
+              <a href="https://mail.yahoo.com">here</a> to create one. Email is
+              required to ensure you to don't get locked out incase you forget
+              your password.
+            </p>
+          </Top>
+        </Row>
+        <Div>
+          <Form />
+        </Div>
+      </FormContainer>
+    </Section>
+  );
+};
 export default Register;
