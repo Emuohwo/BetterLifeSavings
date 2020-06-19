@@ -1,5 +1,5 @@
 import React from "react";
-import logo from "../images/logo.png";
+import logo from "../images/logo.jpeg";
 import wallet from "../images/wallet.png";
 import { Button } from "react-bootstrap";
 import { Link } from "react-router-dom";
@@ -26,7 +26,6 @@ margin: 10px;
 `;
 const Div = styled.div`
 min-height: 100px;
-background-image: url(${logo});
 background-size: contain;
 background-position: center;
 background-repeat: no-repeat;
@@ -34,7 +33,9 @@ background-repeat: no-repeat;
 
 export const AppBar = () => (
   <Root className="row">
-    <Div className="col-sm-4"></Div>
+    <Div className="col-sm-4">
+    <img style={{borderRadius: '50%', width: '100px', height: '105px'}} src={logo} alt="BetterLifeSavings Logo" />
+    </Div>
     <Contact className="col-sm-4">
       
     </Contact>
