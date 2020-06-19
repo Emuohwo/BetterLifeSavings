@@ -21,7 +21,8 @@ const PlanCard = styled(Card)`
     width: 30%;
     margin: 0 auto;
     @media(max-width: 700px) {
-        width: 80%;
+        width: 50% !important;
+        margin: 1.3rem auto;
     }
 `
 
