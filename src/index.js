@@ -9,7 +9,7 @@ import App from './App';
 
 render(
   <AuthProvider>
-    <Router basename='/BetterLifeSavings'>
+    <Router>
       <App />
     </Router>
   </AuthProvider>,
