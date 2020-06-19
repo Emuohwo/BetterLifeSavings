@@ -9,7 +9,7 @@ import App from './App';
 
 render(
   <AuthProvider>
-    <Router>
+    <Router hashType='noslash'>
       <App />
     </Router>
   </AuthProvider>,
