@@ -6,6 +6,7 @@ import LoginForm from "./components/LoginForm";
 import styles from "./App.module.css";
 import PasswordReset from "./components/password-reset";
 import { Home, Register, Account, About, Contact, Footer } from "./screens";
+import RegisterRoute from './components/RegisterRoute';
 import { library } from "@fortawesome/fontawesome-svg-core";
 import { fab } from "@fortawesome/free-brands-svg-icons";
 import {
@@ -30,9 +31,9 @@ const App = () => (
       <Route path="/about">
         <About />
       </Route>
-      <Route path="/register">
+      <RegisterRoute path="/register">
         <Register />
-      </Route>
+      </RegisterRoute>
       <Route path="/account">
         <Account />
       </Route>

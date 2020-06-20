@@ -5,6 +5,7 @@ import logo from "../../images/logo.jpeg";
 import SideBar from "../../components/sidebar";
 import styled from "styled-components";
 import { AuthContext } from "../../context/authContext";
+import { useHistory } from "react-router-dom";
 
 const Div = styled.div`
   background: #43a047;
@@ -40,6 +41,7 @@ const Top = styled(Col)`
 
 const Register = () => {
   const {openLogin} = useContext(AuthContext);
+
   return (
     <Section className="row">
       <SideBar />

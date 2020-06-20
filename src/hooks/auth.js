@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import userService from "../services/userServices";
 
+
 function useGetUser() {
   const [data, setData] = useState({});
   const [loading, setLoading] = useState(false);
@@ -33,12 +34,12 @@ function useGetUser() {
       .createUser(value)
       .then((user) => {
         console.log("postresutl:", user);
-        setData(user);
+        setData({ isAuth: true, ...user });
         setLoading(false);
       })
       .catch((err) => {
         console.log("postresutl:", err);
-        setData(err);
+        setData({ isAuth: false, ...err });
         setLoading(false);
       });
   };
