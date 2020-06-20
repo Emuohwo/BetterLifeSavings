@@ -3,7 +3,7 @@ import { Formik } from "formik";
 import * as yup from "yup";
 import { Form, Button, Spinner,} from "react-bootstrap";
 import styled from 'styled-components';
-import {Link} from 'react-router-dom'
+// import {Link} from 'react-router-dom'
 
 import { AuthContext } from '../../context/authContext';
 
@@ -24,7 +24,8 @@ function Email() {
   const user = useContext(AuthContext);
   console.log('user', user)
 
-  const {loading, login, showLogin, closeLogin} = user;
+  // const {loading, login, showLogin, closeLogin} = user;
+  const {loading, login } = user;
 
   const Btn = loading ?  <Button variant="primary" disabled>
 <Spinner
