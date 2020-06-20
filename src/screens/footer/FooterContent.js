@@ -37,7 +37,7 @@ const FooterContent = () => (
                 betterlifesavings2020@gmail.com
             </a>
             </LI>
-                <a hre="tel:+2348055018140">08055018140</a>
+                <a href="tel:+2348055018140">08055018140</a>
             <LI>
             </LI>
         </UL>
