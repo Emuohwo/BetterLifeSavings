@@ -3,7 +3,7 @@ import { Formik } from "formik";
 import * as yup from "yup";
 import { Form, Button, Spinner, Modal } from "react-bootstrap";
 import styled from 'styled-components';
-import {Link} from 'react-router-dom'
+import {Link} from 'react-router-dom';
 
 import { AuthContext } from '../context/authContext'
 
