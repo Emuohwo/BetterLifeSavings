@@ -1,10 +1,7 @@
 import React from "react";
 import { Form } from "react-bootstrap";
-import {PreviousButton} from './navbuttons/PreviousButton';
-import {NextButton} from './navbuttons/NextButton';
 
-export const EmailAndPhone = ({ step, formik, next, previous }) => {
-  if (step !== 2) return null;
+export const EmailAndPhone = ({ formik }) => {
   const { getFieldProps, touched, errors } = formik;
   return (
     <>
@@ -36,8 +33,6 @@ export const EmailAndPhone = ({ step, formik, next, previous }) => {
           {errors.phone}
         </Form.Control.Feedback>
       </Form.Group>
-      <PreviousButton step={step} previous={previous}  />
-          <NextButton step={step} next={next} disabled={!!errors.email  || !!errors.phone} />
     </>
   );
 };

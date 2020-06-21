@@ -1,25 +1,13 @@
 import React, { useContext } from "react";
 import { Button, Spinner } from "react-bootstrap";
-import { AuthContext } from "../../../../context/authContext";
+import { AuthContext } from "../../../context/authContext";
 
 const styles = {
   float: "right",
 };
-export function NextButton({ step, disabled, next }) {
+export function SubmitBtn({ step, disabled, next }) {
   const { loading } = useContext(AuthContext);
-  if (step < 5) {
-    return (
-      <Button
-        style={styles}
-        className="btn btn-secondary"
-        type="button"
-        onClick={next}
-        disabled={disabled}
-      >
-        Next
-      </Button>
-    );
-  }
+  
   return loading ? (
     <Button variant="primary" disabled style={styles}>
       <Spinner
@@ -33,7 +21,7 @@ export function NextButton({ step, disabled, next }) {
     </Button>
   ) : (
     <Button type="submit" style={styles}>
-      Login
+      Register
     </Button>
   );
 }

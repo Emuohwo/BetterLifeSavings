@@ -1,10 +1,7 @@
 import React from "react";
 import { Form } from "react-bootstrap";
-import { PreviousButton } from "./navbuttons/PreviousButton";
-import { NextButton } from "./navbuttons/NextButton";
 
-export const Name = ({ step, formik, next, previous }) => {
-  if (step !== 1) return null;
+export const Name = ({ formik }) => {
   const { getFieldProps, touched, errors } = formik;
 
   return (
@@ -37,12 +34,6 @@ export const Name = ({ step, formik, next, previous }) => {
           {errors.lastname}
         </Form.Control.Feedback>
       </Form.Group>
-      <PreviousButton step={step} previous={previous} />
-      <NextButton
-        step={step}
-        next={next}
-        disabled={!!errors.firstname || !!errors.lastname}
-      />
     </>
   );
 };

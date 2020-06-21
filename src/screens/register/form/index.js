@@ -1,4 +1,4 @@
-import React, {useContext } from "react";
+import React, { useContext } from "react";
 import { Formik } from "formik";
 import * as yup from "yup";
 import { Form } from "react-bootstrap";
@@ -7,7 +7,8 @@ import { Name } from "./Name";
 import { Address } from "./Address";
 import { StateCityGenderBirth } from "./StateCity";
 import { UsernameAndPassword } from "./UsernameAndPass";
-import { AuthContext } from '../../../context/authContext'
+import {SubmitBtn} from './SubmitBtn';
+import { AuthContext } from "../../../context/authContext";
 
 const phoneRegExp = /^(\+?\d{0,4})?\s?-?\s?(\(?\d{3}\)?)\s?-?\s?(\(?\d{3}\)?)\s?-?\s?(\(?\d{4}\)?)?$/;
 const schema = yup.object({
@@ -60,11 +61,6 @@ const schema = yup.object({
 
 function RegisterationForm() {
   const user = useContext(AuthContext);
-  console.log('user', user)
-
-  const {step, next, previous} = user;
-
-  
 
   return (
     <Formik
@@ -87,31 +83,12 @@ function RegisterationForm() {
     >
       {(formik) => (
         <Form noValidate onSubmit={formik.handleSubmit}>
-          <Name formik={formik} step={step} next={next} previous={previous} />
-          <EmailAndPhone
-            formik={formik}
-            step={step}
-            next={next}
-            previous={previous}
-          />
-          <Address
-            formik={formik}
-            step={step}
-            next={next}
-            previous={previous}
-          />
-          <StateCityGenderBirth
-            formik={formik}
-            step={step}
-            next={next}
-            previous={previous}
-          />
-          <UsernameAndPassword
-            formik={formik}
-            step={step}
-            next={next}
-            previous={previous}
-          />
+          <Name formik={formik} />
+          <EmailAndPhone formik={formik} />
+          <Address formik={formik} />
+          <StateCityGenderBirth formik={formik} />
+          <UsernameAndPassword formik={formik} />
+          <SubmitBtn />
         </Form>
       )}
     </Formik>

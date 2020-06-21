@@ -1,10 +1,7 @@
 import React from "react";
 import { Form, Col, Row } from "react-bootstrap";
-import { PreviousButton } from "./navbuttons/PreviousButton";
-import { NextButton } from "./navbuttons/NextButton";
 
-export const StateCityGenderBirth = ({ step, formik, next, previous }) => {
-  if (step !== 4) return null;
+export const StateCityGenderBirth = ({ formik }) => {
   const { getFieldProps, touched, errors, setFieldValue, values } = formik;
   return (
     <>
@@ -92,13 +89,6 @@ export const StateCityGenderBirth = ({ step, formik, next, previous }) => {
           </Form.Control.Feedback>
         </Form.Group>
       </Form.Row>
-
-      <PreviousButton step={step} previous={previous} />
-      <NextButton
-        step={step}
-        next={next}
-        disabled={!!errors.city || !!errors.state || errors.gender}
-      />
     </>
   );
 };

@@ -1,10 +1,7 @@
 import React from "react";
 import { Form } from "react-bootstrap";
-import { PreviousButton } from "./navbuttons/PreviousButton"
-import { NextButton } from "./navbuttons/NextButton"
 
-export const Address = ({ step, formik, next, previous }) => {
-  if (step !== 3) return null;
+export const Address = ({  formik }) => {
   const { getFieldProps, touched, errors } = formik;
   return (
     <>
@@ -31,8 +28,6 @@ export const Address = ({ step, formik, next, previous }) => {
           {...getFieldProps("address2")}
         />
       </Form.Group>
-      <PreviousButton step={step} previous={previous} />
-      <NextButton step={step} next={next} disabled={!!errors.address1} />
     </>
   );
 };
