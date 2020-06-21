@@ -3,14 +3,20 @@ import { Card } from 'react-bootstrap';
 import styled from 'styled-components';
 
 export const Profile = (props) => {
-    const {name, title, profile_pic } = props.team;
+    const {name, title, profile_pic, whatsapp, facebook, instagram,phoneNumbers } = props.team;
     return (
         <PlanCard>
             <Card.Img src={profile_pic} alt={name} />
-            <Card.Body>
+            <CardBody>
                 <Card.Title>{title}</Card.Title>
                 <p>{name}</p>
-            </Card.Body>
+                <>
+                   <a href={facebook}>Facebook</a> <br />
+                   {instagram ? <a href={instagram}>Instagram</a> : null}
+                   <p>call: {phoneNumbers}</p>
+                   <p> whatsapp: {whatsapp}</p>
+                </>
+            </CardBody>
         </PlanCard>
     );
 }
@@ -25,8 +31,8 @@ const PlanCard = styled(Card)`
         margin: 1.3rem auto;
     }
 `
+const CardBody = styled(Card.Body)`
+    background: green;
+    color: #fff;
+`;
 
-// const ProfileWrapper = styled.div`
-//     display: flex;
-//     color: red;
-// `

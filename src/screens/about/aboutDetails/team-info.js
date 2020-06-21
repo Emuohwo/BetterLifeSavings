@@ -4,18 +4,28 @@ import pastor from '../../../images/about/pastor.png';
 
 export const teamsInfo = [
     {
-        name: 'Fehintola',
-        title: 'Founder',
-        profile_pic: Fehintola_pic
+        name: 'Adekoya W.A (aka baba)',
+        title: 'Founder/Chief executive officer/Chief account officer',
+        profile_pic: Fehintola_pic,
+        facebook: 'https://www.facebook.com/adedeji.adekoya.319',
+        whatsapp: '+2348051921999',
+        phoneNumbers: '08051921999 08035691490.'
     },
     {
-        name: 'Pastor',
-        title: 'CEO',
-        profile_pic: pastor
+        name: 'Adekoya E.O (aka pastor) ',
+        title: 'Religious leader ',
+        profile_pic: pastor,
+        facebook: 'https://www.facebook.com/Success95',
+        whatsapp: '+2348054049421',
+        phoneNumbers: '07020561296'
     },
     {
-        name: 'Jeremiah',
+        name: 'Adekoya J.B (aka MrJerry)',
         title: 'Chief Operations Officer',
-        profile_pic: jerry_pic
+        profile_pic: jerry_pic,
+        facebook: 'https://www.facebook.com/mrjerrytheajoguy',
+        instagram: 'instagram.com/mejerrytheajoguy',
+        whatsapp: '+2347086902001',
+        phoneNumbers: '07086902001'
     }
 ]
