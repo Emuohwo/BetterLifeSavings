@@ -20,7 +20,7 @@ class userService {
           resolve(response.data);
         })
         .catch((error) => {
-          reject(error.response);
+          reject(error.response.data);
         });
     });
   }

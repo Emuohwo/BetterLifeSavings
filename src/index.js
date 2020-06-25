@@ -1,6 +1,6 @@
 import React from 'react';
 import { render } from 'react-dom';
-import { BrowserRouter as Router } from 'react-router-dom';
+import { HashRouter as Router } from 'react-router-dom';
 import * as serviceWorker from './serviceWorker';
 import AuthProvider from './context/authContext'
 import App from './App';
@@ -9,7 +9,7 @@ import App from './App';
 
 render(
   <AuthProvider>
-    <Router>
+    <Router hashType='noslash'>
       <App />
     </Router>
   </AuthProvider>,

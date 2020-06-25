@@ -1,10 +1,7 @@
 import React from "react";
 import { Form } from "react-bootstrap";
-import {PreviousButton} from './navbuttons/PreviousButton';
-import {NextButton} from './navbuttons/NextButton';
 
-export const UsernameAndPassword = ({ step, formik, next, previous }) => {
-  if (step !== 5) return null;
+export const UsernameAndPassword = ({ formik }) => {
   const { getFieldProps, touched, errors } = formik;
   return (
     <>
@@ -18,7 +15,6 @@ export const UsernameAndPassword = ({ step, formik, next, previous }) => {
           isValid={touched.username && !errors.username}
           isInvalid={touched.username && !!errors.username}
         />
-        <Form.Control.Feedback type="valid">Looks good!</Form.Control.Feedback>
         <Form.Control.Feedback type="invalid">
           {errors.username}
         </Form.Control.Feedback>
@@ -33,13 +29,10 @@ export const UsernameAndPassword = ({ step, formik, next, previous }) => {
           isValid={touched.password && !errors.password}
           isInvalid={touched.password && !!errors.password}
         />
-        <Form.Control.Feedback type="valid">Looks good!</Form.Control.Feedback>
         <Form.Control.Feedback type="invalid">
           {errors.password}
         </Form.Control.Feedback>
       </Form.Group>
-      <PreviousButton step={step} previous={previous}  />
-          <NextButton step={step} next={next} disabled={!!errors.username  || !!errors.password} />
     </>
   );
 };

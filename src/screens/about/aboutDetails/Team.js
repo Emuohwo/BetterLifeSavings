@@ -24,4 +24,7 @@ const ProfileWrapper = styled.div`
     justifyContent: space-around;
     color: green;
     margin: 0 auto;
+    @media(max-width:700px) {
+        display: block;
+    }
 `;
