@@ -15,9 +15,10 @@ import {
   faEnvelope,
   faEllipsisV,
   faShareAlt,
+  faPhone
 } from "@fortawesome/free-solid-svg-icons";
 
-library.add(fab, faCheckSquare, faCoffee, faEnvelope, faShareAlt, faEllipsisV);
+library.add(fab, faCheckSquare, faCoffee, faEnvelope, faShareAlt, faEllipsisV, faPhone);
 
 const App = () => (
   <div className={styles.App}>

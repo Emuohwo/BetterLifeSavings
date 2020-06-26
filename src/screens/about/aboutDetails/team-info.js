@@ -9,7 +9,8 @@ export const teamsInfo = [
         profile_pic: Fehintola_pic,
         facebook: 'https://www.facebook.com/adedeji.adekoya.319',
         whatsapp: '+2348051921999',
-        phoneNumbers: '08051921999 08035691490.'
+        phoneNumbers: '08051921999',
+        phoneNumber2: '08035691490'
     },
     {
         name: 'Adekoya E.O (aka pastor) ',
@@ -17,7 +18,8 @@ export const teamsInfo = [
         profile_pic: pastor,
         facebook: 'https://www.facebook.com/Success95',
         whatsapp: '+2348054049421',
-        phoneNumbers: '07020561296'
+        phoneNumbers: '07020561296',
+        phoneNumber2: ''
     },
     {
         name: 'Adekoya J.B (aka MrJerry)',
@@ -26,6 +28,7 @@ export const teamsInfo = [
         facebook: 'https://www.facebook.com/mrjerrytheajoguy',
         instagram: 'instagram.com/mejerrytheajoguy',
         whatsapp: '+2347086902001',
-        phoneNumbers: '07086902001'
+        phoneNumbers: '07086902001',
+        phoneNumber2: ''
     }
 ]

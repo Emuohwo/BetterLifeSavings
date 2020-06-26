@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import logo from "../images/logo.jpeg";
+import logo from "../images/logo.png";
 import wallet from "../images/wallet.png";
 import { Button } from "react-bootstrap";
 import { Link } from "react-router-dom";
@@ -36,7 +36,7 @@ export const AppBar = () => {
     <Root className="row">
       <Div className="col-sm-4">
         <img
-          style={{ borderRadius: "50%", maxWidth: "100px", maxHeight: "105px" }}
+          style={{ borderRadius: "80%", maxWidth: "50%", maxHeight: "105px" }}
           src={logo}
           alt="BetterLifeSavings Logo"
         />

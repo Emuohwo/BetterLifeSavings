@@ -1,21 +1,33 @@
 import React from 'react';
 import { Card } from 'react-bootstrap';
 import styled from 'styled-components';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 export const Profile = (props) => {
-    const {name, title, profile_pic, whatsapp, facebook, instagram,phoneNumbers } = props.team;
+    const {name, title, profile_pic, whatsapp, facebook, instagram,phoneNumbers, phoneNumber2 } = props.team;
     return (
         <PlanCard>
             <Card.Img src={profile_pic} alt={name} />
             <CardBody>
                 <Card.Title>{title}</Card.Title>
                 <p>{name}</p>
-                <>
-                   <a href={facebook}>Facebook</a> <br />
-                   {instagram ? <a href={instagram}>Instagram</a> : null}
-                   <p>call: {phoneNumbers}</p>
-                   <p> whatsapp: {whatsapp}</p>
-                </>
+                <Icons>
+                   <a href={facebook}>
+                    <FontAwesomeIcon icon={['fab', 'facebook']} size='2x' color='#0091ea'/>
+                   </a> 
+                   {instagram ? <a href={instagram}>
+                    <FontAwesomeIcon icon={['fab', 'instagram']} size='2x' color='#ff4081'/>
+                   </a> : null}
+                   {phoneNumber2 ? <a href={`tel:${phoneNumber2}`}>
+                   <FontAwesomeIcon icon="phone" size='2x' color='#00e171'/>
+                   </a> : null}
+                   <a href={`tel:${phoneNumbers}`}>
+                    <FontAwesomeIcon icon="phone" size='2x' color='#00e171'/>
+                   </a>
+                   <a href={`tel:${whatsapp}`}>
+                    <FontAwesomeIcon icon={['fab', 'whatsapp']} size='2x' color='#00e676'/>
+                   </a>
+                </Icons>
             </CardBody>
         </PlanCard>
     );
@@ -36,3 +48,7 @@ const CardBody = styled(Card.Body)`
     color: #fff;
 `;
 
+const Icons = styled.div`
+    display: flex;
+    justify-content: space-around;
+`;
